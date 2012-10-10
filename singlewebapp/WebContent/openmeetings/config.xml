@@ -88,6 +88,14 @@ of the red5-servlet
 <currentappnameurl>http://incubator.apache.org/openmeetings</currentappnameurl>        
 
 <!--
+    Should APP name and/or logo be displayed
+-->    
+<appdisplay>
+	<displayelement name="logo" display="true" x="5" y="5"/>
+	<displayelement name="name" display="true" x="140" y="10"/>
+</appdisplay>
+
+<!--
     URL to Bugs/Support
     this is the URL which is used if you click on *report a bug*
  -->
