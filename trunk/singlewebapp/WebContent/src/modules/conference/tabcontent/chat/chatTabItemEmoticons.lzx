@@ -95,7 +95,7 @@
 		  name="header_user">
 	</text>
 	
-	<state applied="$once{ !parent.isDirectLink }">
+	<!-- state applied="$once{ !parent.isDirectLink }">
 	
 	    <miniIconsImage name="add" src="$once{ canvas.getThemeImage('edit_add_rsc') }" width="16" height="16" 
 	                   y="2" x="$once{ parent.width - 122 }" showhandcursor="true">
@@ -110,7 +110,7 @@
 	        <labelTooltip labelid="1186" />
 	    </miniIconsImage>
     
-    </state>
+    </state -->
     
     <!--
     public Long requestUserToContactList(String SID, Long userToAdd_id, 
@@ -246,7 +246,7 @@
 	        <labelTooltip labelid="1253" />
 	    </miniIcons>
 	    
-	    <miniIcons resource="user_profile_rsc" width="16" height="16" 
+	    <!-- miniIcons resource="user_profile_rsc" width="16" height="16" 
 	               y="0" x="$once{ parent.width - 84 }" showhandcursor="true">
 	        <handler name="onclick">
 	            if ($debug) Debug.write("Start Conference");
@@ -255,7 +255,7 @@
 	                            });
 	        </handler>
 	        <labelTooltip labelid="1236" />
-	    </miniIcons>    		  
+	    </miniIcons -->    		  
 			  
 	    <miniIcons y="0" x="$once{ parent.width - 64 }"
 	    		   resource="start_conference2_rsc" width="16" height="16" 

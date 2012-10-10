@@ -79,6 +79,7 @@
 			        this.parent.parent.sendOpenMenu(this);
 			    </handler>
 			</baseMenuMeetingsItem>
+			<image id="roomlogo" visible="true" src="$once{ canvas.getThemeImage('room_logo_image') }"/>
 			
 		</view>
 	
@@ -221,9 +222,9 @@
 		<view name="_content" x="1" y="1" 
 			layout="axis:y;spacing:1" bgcolor="$once{ canvas.getThemeColor('menuBackgroundColor') }" >
 			
-			<conferencDropDownMenuItem labelid="213" command="cmd_invitation" 
+			<!--conferencDropDownMenuItem labelid="213" command="cmd_invitation" 
 						enabled="${ canvas.ismoderator }" />
-			<horizontalDropDownSpacer />
+			<horizontalDropDownSpacer /-->
 			<conferencDropDownMenuItem labelid="239" command="cmd_shareDesktop" 
 						enabled="${ canvas.ismoderator }" />			
 			<horizontalDropDownSpacer />
@@ -240,7 +241,7 @@
 			<horizontalDropDownSpacer />
 			<conferencDropDownMenuItem labelid="786" command="cmd_applyforAV"
 						enabled="${ !canvas.ismoderator }" />				
-			<horizontalDropDownSpacer />
+			<!--horizontalDropDownSpacer />
 			<conferencDropDownMenuItem labelid="24" command="cmd_createPoll" 
 						enabled="${ canvas.ismoderator }" />
 			<horizontalDropDownSpacer />			
@@ -248,7 +249,7 @@
 						enabled="true" />
 			<horizontalDropDownSpacer />
 			<conferencDropDownMenuItem labelid="42" command="cmd_checkPollVoted" 
-						 enabled="true"/>
+						 enabled="true"/-->
 			<horizontalDropDownSpacer
 						 visible="$once{ (canvas.RED5_SIP_ENABLE == 'yes') ? true : false }" />
             <conferencDropDownMenuItem labelid="1447" command="cmd_showSipDialer" 

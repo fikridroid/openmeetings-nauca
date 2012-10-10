@@ -26,16 +26,16 @@
 	<color name="mainBackgroundColor" value="0xEEF0EB" 
 				description="main background color" />
 
-	<color name="basebgcolorizer" value="0xBDC0DB" 
+	<color name="basebgcolorizer" value="0xFFED00" 
 				description="Color for background" />
 				
-	<color name="baseMousecolorizer" value="0xBDC0DB" 
+	<color name="baseMousecolorizer" value="0x09600" 
 				description="Color Mouseover color for list items" />
 	
-	<color name="baseMouseOvercolorizer" value="0xBDC0DB" 
+	<color name="baseMouseOvercolorizer" value="0x09600" 
 				description="Color Mouseover color for list items" />	
 	
-	<color name="styleMenuBarBaseColor" value="0x000088" 
+	<color name="styleMenuBarBaseColor" value="0x09600" 
 				description="menu bar background color" />				
 	
 	<color name="mainBorderColor" value="0xCCCCCC" 
@@ -44,10 +44,10 @@
 	<color name="secondBorderColor" value="0xE0E0E0" 
 				description="main border color" />	
 		
-	<color name="menuBackgroundColor" value="0xEFEFEF" 
+	<color name="menuBackgroundColor" value="0x09600" 
 				description="main border color" />
 				
-	<color name="menuTextColor" value="0x666666" 
+	<color name="menuTextColor" value="0x0" 
 				description="color of text for menus" />
 	
 	<color name="menuTextDisabledColor" value="0xBBBBBB" 
@@ -57,7 +57,11 @@
 	<resource name="logo_image" 
 				description="Logo to display on Main BG Navi" 
 				license="APL"
-				src="public/themes/basic-theme/general/logo.png" />
+				src="public/themes/basic-theme/general/Nauca_RGB_DE2.jpg" />
+	<resource name="room_logo_image" 
+				description="Logo to display in Room Menu" 
+				license="APL"
+				src="public/themes/basic-theme/general/Nauca_RGB_DE2-room.jpg" />
 	
 	<resource name="icon_facebook_rsc_png" 
 				description="Icon for facebook button in login" 

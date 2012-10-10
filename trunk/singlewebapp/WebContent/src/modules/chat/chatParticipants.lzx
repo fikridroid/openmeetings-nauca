@@ -95,7 +95,7 @@
 	<text text="$once{ parent.username }" x="40" resize="false"
 		  width="$once{ parent.width - 40 }" />	
 		  
-	<miniIconsImage name="add" src="$once{ canvas.getThemeImage('edit_add_rsc') }" width="16" height="16" 
+	<!--miniIconsImage name="add" src="$once{ canvas.getThemeImage('edit_add_rsc') }" width="16" height="16" 
                    y="20" x="$once{ parent.width - 80 }" showhandcursor="true">
         <handler name="onclick">
             if ($debug) Debug.write("Start Conference");
@@ -106,7 +106,7 @@
             parent.requestUserToContactList.doCall();
         </handler>
         <labelTooltip labelid="1186" />
-    </miniIconsImage>
+    </miniIconsImage-->
     
     <miniIcons name="private_message_add" resource="private_message_add_rsc" width="16" height="16" 
                    y="20" x="$once{ parent.width - 60 }" showhandcursor="true">
@@ -127,7 +127,7 @@
         <labelTooltip labelid="1253" />
     </miniIcons>
 	
-	<miniIcons resource="user_profile_rsc" width="16" height="16" 
+	<!--miniIcons resource="user_profile_rsc" width="16" height="16" 
                y="20" x="$once{ parent.width - 40 }" showhandcursor="true">
         <handler name="onclick">
             if ($debug) Debug.write("Start Conference");
@@ -136,7 +136,7 @@
                             });
         </handler>
         <labelTooltip labelid="1236" />
-    </miniIcons>    
+    </miniIcons-->    
 	
 	<miniIcons resource="start_conference2_rsc" width="16" height="16" 
 			   y="20" x="$once{ parent.width - 20 }" showhandcursor="true">

@@ -204,6 +204,7 @@
             parent.chooseSelect();
         </method>
 
+    		<!--wrappinglayout axis="x" spacing="2" xinset="2" /-->
 	</view>
 	
 </class>
@@ -259,7 +260,7 @@
     	}
     	
     	var imageurl = canvas.protocol + '://'+canvas.rtmphostlocal+':'+canvas.red5httpport+canvas.httpRootKey
-                                        +'public/cliparts/thumb/'+refObj.modi;
+                                        +'public/cliparts/'+folderName+'thumb/'+refObj.modi;
     	
         if ($debug) Debug.write("this.refToolbar :: ",this.refToolbar);        
                                         
@@ -311,16 +312,66 @@
                     <![CDATA[
                         //The onResult-Handler will be called be the rtmpconnection
                         //if ($debug) Debug.write("############## getClipArtIcons : ",value);
-                        parent.loadIconThumbs(value.generalList,"");
+                        
+                    	for (var subCategoryId in value.subCategories) {
+                    		//if ($debug) Debug.write("subCategory : ",subCategoryId);
+                    		if (value.subCategories[subCategoryId].folderName == "math") {
+                    			//parent.loadIconMainTheme(value.subCategories[subCategoryId].folderName,
+                    			//             value.subCategories[subCategoryId].folderName);
+                    			//parent.loadIconThumbs(value.subCategories[subCategoryId].generalList,
+                    			//             value.subCategories[subCategoryId].folderName);
+	                    		parent.loadMathIconThumbs(value.subCategories[subCategoryId].folderName,
+	                    		                     value.subCategories[subCategoryId].generalList);
+                    		}
+                    	}
+                    
+                        parent.loadGeneralIconThumbs(value.generalList);
                     ]]>
                 </handler>   
             </netRemoteCallHib> 
             
+            <method name="loadIconMainTheme" args="fName,folderName">
+            	<![CDATA[
+                          
+                    this.currentContainer = new lz.miniIconSmybolExtraIconsContainer(this,{
+								                          fName:fName,
+								                          folderName:folderName
+								                      });
+                                  
+                ]]>
+            </method>    
+            
+            <method name="loadMathIconThumbs" args="folderName,iconList">
+                this.currentContainer = new lz.miniIconSmybolExtraIconsContainer(this,{
+                                                      fName:canvas.getLabelName(1368),
+                                                      folderName:folderName,
+                                                      iconList:iconList,
+                                                      isopen:false
+                                                  });            	
+            	new lz.miniIconSmybolExtraIconsImageMap(this.currentContainer._content,{
+                                          resource:'sub_menu_icons_math_all_rsc'});
+				//loadIconThumbs(iconList, folderName);
+            </method>
+            
+            <method name="loadGeneralIconThumbs" args="iconList">
+                this.currentContainer = new lz.miniIconSmybolExtraIconsContainer(this,{
+                                                      fName:canvas.getLabelName(1369),
+                                                      folderName:"",
+                                                      iconList:iconList
+                                                  });              
+                new lz.miniIconSmybolExtraIconsImageMap(this.currentContainer._content,{
+                                          resource:'sub_menu_icons_general_all_rsc'});
+				//loadIconThumbs(iconList, "");
+            </method>
+            
             <method name="loadIconThumbs" args="list,folderName">
             	<![CDATA[
+            	    if (folderName != "") {
+            	    	folderName += "/";
+            	    }
             	
                     var imageurl = canvas.protocol + '://'+canvas.rtmphostlocal+':'+canvas.red5httpport+canvas.httpRootKey
-                                        +'public/cliparts/thumb/';
+                                        +'public/cliparts/'+folderName+'thumb/';
                     
                     //if ($debug) Debug.write("imageurl :: ",imageurl);            	
                         	
@@ -332,10 +383,10 @@
                     	
                             var iconresourceName = imageurl + list[i];
                           
-                            new lz.miniIconSmybolExtraIcons(this,{
+                            new lz.miniIconSmybolExtraIcons(this.currentContainer._content,{
                                           modi:list[i],
-                                          resource:iconresourceName,
-                                          stretches:'both'
+                                          resource:iconresourceName/*,
+                                          stretches:'both'*/
                                       });
                                   
                     	}
@@ -345,7 +396,8 @@
                 ]]>
             </method>    		 
     		
-    		<wrappinglayout axis="y" spacing="2" inset="2" />
+    		<!--wrappinglayout axis="x" spacing="2" xinset="2" /-->
+			<simplelayout axis="y" spacing="2" xinset="2" />
     	</view> 
     	
     	<om_vscrollbar />
