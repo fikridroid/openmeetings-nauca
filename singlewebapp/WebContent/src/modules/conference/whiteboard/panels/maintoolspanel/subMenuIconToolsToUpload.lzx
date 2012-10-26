@@ -216,7 +216,7 @@
 	
 <class name="subMenuIconToolsToUpload" extends="guiPresenter" labelid="1335" 
     minimizable="false" maximizable="false" fullToolBar="true" 
-    resizeable="false" width="340" height="280" >
+    resizeable="false" width="540" height="480" >
 	
 	<attribute name="currentSelected" value="null" />
 	<attribute name="refToolbar" value="null" />
