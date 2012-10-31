@@ -26,7 +26,7 @@
  -->
 <class name="fileExplorer" extends="view" >
     
-    <attribute name="parentFolderId" value="-2" type="number" />
+    <attribute name="parentFolderId" value="0" type="number" />
     
     <attribute name="_selected" value="null" />
     
